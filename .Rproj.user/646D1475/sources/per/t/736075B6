@@ -1,0 +1,32 @@
+{
+    "id": "736075B6",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1593294190097.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "expression": "us_latam",
+        "caption": "us_latam",
+        "totalObservations": 380,
+        "displayedObservations": 380,
+        "variables": 11,
+        "cacheKey": "AF4D4DC7",
+        "object": "us_latam",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=us_latam&cache_key=AF4D4DC7&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 755771506971734881,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1593294190097,
+    "read_only": false,
+    "read_only_alternatives": []
+}
