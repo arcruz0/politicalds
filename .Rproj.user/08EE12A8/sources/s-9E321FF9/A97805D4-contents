@@ -42,48 +42,6 @@ data(messy_summary) # Prueba si carga la base
 devtools::install() # Lo instala en el repositorio
 library(politicalds) # Lo carga hasta cerrar la sesi?n
 
-devtools::install_github("username/politicalds") # Instala en GitHub
+devtools::install_github("vmquintero/politicalds") # Instala en GitHub
 
 ??install_github
-
-------------------------------------------------------------------------------------------------
-# ENGLISH PACKAGE V.2
-
-# Cargar archivos
-
-lapply(list.files("data_to_add/", full.names = T), load, .GlobalEnv)
-
-list_data <- mget(ls())
-
-# Crear bases para el paquete
-
-dir.create("data")
-
-f_save_data_package <- function(x, name_x){
-  save(x, file = glue("data/{name_x}.rda"),
-       compress = "bzip2", version = 2)
-}
-
-walk2(list_data, names(list_data), f_save_data_package)
-
-data_frames <- Filter(function(x){is.data.frame(get(x))}, ls())
-
-for(d in data_frames) {
-  save(list = d, file = glue("data/{d}.rda"),
-       compress = "bzip2", version = 2)
-}
-
-walk2(list_data, names(list_data), ~ {
-
-})
-
-devtools::document()
-
-
-
-
-
-
-
-
-
