@@ -1,7 +1,7 @@
 Package: politicalds
 Type: Package
 Title: Complement package of the book "R for Political Data Science. A practical guide", Urdinez & Cruz (2020)"
-Version: 0.1.0
+Version: 0.2.0
 Author: Andrés Cruz
 Maintainer: The package maintainer <arcruz@uc.cl>
 Description: Complement package of the book "R for Political Data Science. A practical guide"
