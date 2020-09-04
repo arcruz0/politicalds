@@ -1,0 +1,51 @@
+---
+title: "Grupos aleatorios"
+author: "Vicente Quintero"
+date: "01-09-2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+--------------------------------------------------------------------------------------------------------
+
+```{r}
+install.packages("randomizr")
+library(tidyverse)
+library(randomizr)
+```
+
+```{r}
+estudiantes <- c("estudiante_1", "estudiante_2", "estudiante_3", "estudiante_4",
+                 "estudiante_5", "estudiante_6", "estudiante_7", "estudiante_8",
+                 "estudiante_9", "estudiante_10", "estudiante_11", "estudiante_12")
+
+mail <- c("mail_1", "mail_2", "mail_3", "mail_4", "mail_5", "mail_6", "mail_7", "mail_8",
+          "mail_9", "mail_10", "mail_11", "mail_12")
+
+seccion <- c(1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
+
+df_curso <- data.frame(estudiantes, mail, seccion)
+```
+
+```{r}
+random_4 <- df_curso %>% 
+  group_by(seccion) %>%
+  slice(sample(c(1,2),1))
+
+random_3 <- df_curso %>% 
+  group_by(seccion) %>%
+  slice(sample(c(1,2),1))
+
+random_3
+random_4
+```
+
+```{r}
+set <-  tapply(1:nrow(df_curso), df_curso$seccion, FUN = sample, size = 1)
+
+df_curso[set,]
+```
+

@@ -1,0 +1,40 @@
+library(devtools)
+library(roxygen2)
+library(tidyverse)
+
+# PAQUETE ESPAÑOL
+
+data_package <- list.files("C:/Users/tatan/OneDrive/Escritorio/Vicho/Clean data/00-datos", full.names = T)
+View(data_package)
+
+lapply(data_package, load, .GlobalEnv)
+
+use_data(aprobacion)
+use_data(aprobacion_wide1)
+use_data(aprobacion_wide2)
+use_data(bienestar)
+use_data(copatrocinio_arg)
+use_data(datos_municipales)
+use_data(democracia_directa)
+use_data(edad_educ)
+use_data(eeuu_brasil)
+use_data(eeuu_latam)
+use_data(indice_cinc)
+use_data(lapop)
+use_data(pib_pc_america)
+use_data(quiebre_democracia)
+use_data(red_mosquitos)
+use_data(resumen_desordenado)
+use_data(senadores_arg)
+use_data(tratados)
+
+devtools::document()
+
+devtools::load_all() #Lo carga hasta cerrar la sesión
+
+data(messy_summary) # Prueba si carga la base
+
+devtools::install() # Lo instala en el repositorio
+library("paqueteadp") # Lo carga hasta cerrar la sesión
+
+devtools::install_github("username/paqueteadp") # Instala en GitHub
